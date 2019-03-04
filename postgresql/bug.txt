@@ -1,0 +1,12 @@
+consertar o bug de n criar o banco automaticamente
+
+RUN echo "host all  all    0.0.0.0/0  trust" >> /var/lib/postgresql/data/pg_hba.conf
+
+
+
+docker exec --user postgres -it [id] sh
+psql -d template1
+psql -U postgres postgres
+
+createdb  1
+psql -h localhost
