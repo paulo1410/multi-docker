@@ -15,7 +15,7 @@ after_success:
   - docker build -t paulo1410/multi-server ./server
   - docker build -t paulo1410/multi-worker ./worker
   # Fazer login no Docker CLI usando variáveis de ambiente do Travis
-  - echo "DOCKER_PW" | docker login -u "DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
   # Depios enviar essas imagens para o Dockerhub
   - docker push paulo1410/multi-client
   - docker push paulo1410/multi-nginx
