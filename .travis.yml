@@ -21,7 +21,6 @@ after_success:
   - docker push paulo1410/multi-nginx
   - docker push paulo1410/multi-server
   - docker push paulo1410/multi-worker
-
 deploy:
   provider: elasticbeanstalk
   region: "sa-east-1"
